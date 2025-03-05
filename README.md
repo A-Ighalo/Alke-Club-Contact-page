@@ -4,9 +4,29 @@ My friend didn't take my page so I guess we can have it here then! 😉
 # Project Overview
 A full-stack Django web application for handling user feedback and contact form submissions. This project integrates front-end form handling with Django back-end functionality, enabling users to submit their information, which is then processed and acknowledged with a confirmation message. This web application also includes basic form validation and utilizes Django’s CSRF protection for secure submissions
 
+### Tech Utilized
+  * HTML
+    * Markup/ the skeleton of my webpage
+      
+* CSS
+  * For Styling this beautiful webpage
+    
+* JavaScript
+  * Form Valdation and Interactive actions
+    
+* Django 
+  * Backend Development
+  * Form Handling
+  * Dynamic Content Rendering
+  * URL Routing
+  * CSRF Protection
+  * User Feedback
+  * Email Settings 
+
+  
 # Future Ideas
 * An AI assitant that would be asked about the club, their core values and club opportunities
-* A collection of internship opportunities for club members - I can't give jobs, if I could, hmmm. There will be news posts, job links and seminar invites
+* A collection of internship opportunities for club members - I can't give jobs but if I could, hmmm. Anyway, there will be news posts, job links and seminar invites
 * A slide show of new members. Probably fake members but there is definately going to be a slide show. That's web development 101
 
 
