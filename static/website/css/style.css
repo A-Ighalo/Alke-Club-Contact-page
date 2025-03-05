@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+header {
+  padding: 1px;
+  /* background-color:pink; */
+}
+
+.contact_nav{
+  float:right;
+}
+
+
+.contact_nav a{
+  color: brown;
+  text-decoration: none;
+}
+
+.contact_nav li {
+  
+  display: inline;
+  color: brown;
+  padding-bottom: 50px; 
+  padding-left: 45px;
+  cursor:pointer
+}
+
+
+
+.main1 {
+  /* background-image:url("../images/Picture1.jpg");  */
+  background-color: rgb(47, 15, 15);
+  padding: 49px;
+
+
+}
+
+.form_div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+} 
+
+
+
+
+.contact_form label {
+  font-size: 20px;
+  color: antiquewhite;
+  display: block;
+  padding-bottom: 15px;
+  padding-top: 35px;
+}
+
+.AlkeLogo {
+  width: 275px;
+  float: left;
+  overflow: hidden;
+}
+
+input[type=text],[type=tel],[type=email],textarea {
+  border: none;
+  color:white;
+  width: 500px;
+  height:40px;
+  box-sizing: border-box;
+  background: transparent;
+  border-bottom: 2px solid black;
+  text-align: justify;
+
+}
+
+
+
+
+input[type=submit] {
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 4px;
+  width: 90px;
+  font-size: 19px;
+  color: bisque;
+  border-color: bisque;
+  background: transparent;
+  cursor:pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(255, 217, 196);
+  color: black;
+}
+
+figure img{
+ border-radius: 20px;
+ border:none;
+}
+
+.section_googleFormAlke{
+  background-color: rgb(47, 15, 15);
+  
+  
+}
+
+
+.googleFormAlke{
+  overflow: hidden;
+  margin: auto;
+  width: 90%;
+  margin-left:6%;
+  padding:5px;
+}
+
+footer {
+  background-color: bisque;
+}
+
+footer {
+  padding: 50px;
+  overflow: hidden
+}
+
+
+.footer_nav{
+  text-align: center;
+}
+
+.footer_nav a{
+  color: brown;
+  text-decoration: none;
+}
+
+
+
+
+.footer_nav li {
+  display: inline;
+  padding-bottom: 50px;
+  padding-left: 45px;
+  align-items: center;
+  cursor:pointer;
+} 
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+  .contact_us_image {
+    width: 212px;
+    float: left;
+  }
+
+  .hands_together{
+    width:80%;
+    height:auto;
+   }
+
+   /* .form_div {
+    width:100%;
+    }  */
+
+}
+
+@media only screen and (max-width:590px) {
+   .contact_nav {
+    display: none;
+  } 
+
+  .contact_us_image {
+    width: 212px;
+    float: left;
+  }
+ .hands_together{
+  width:100%;
+  height:auto;
+ }
+  footer li {
+    width: fit-content;
+    overflow: hidden
+  }
+
+  
+  input[type=text], [type=tel], [type=email], textarea {
+  width: 100%;
+  padding: 20px;
+ 
+}
+
+.footer_nav{
+  text-align:justify;
+}
+
+}

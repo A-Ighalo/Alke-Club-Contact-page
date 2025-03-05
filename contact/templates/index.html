@@ -1,0 +1,154 @@
+{% load static%}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>AlkeClub Demo</title>
+    <meta charset="UTF-8">
+    <link rel = "icon"  href= "{%  static 'website\images\favicon_io\favicon.ico' %}">
+    <meta name="description" content="contact us page for Alke club">
+    <meta name="keywords" content="Black,African,Caribbean,Aboriginal,Algoma university">
+    <meta name="author" content="Abraham">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <script type="text/javascript" src="{% static 'website/javascript/contact_us.js' %}"></script>
+</head>
+
+
+<body>
+    
+    <img src="{% static 'website/images/club_logo.jpg' %}" class="AlkeLogo">
+    <header style = " display: block; padding: 80px; overflow: hidden;">
+         
+        <nav>
+            <ul class="contact_nav">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#join_the_team">Join The Team</a></li>
+            </ul>
+
+            <!-- <h1 style = "text-align: center; font-size: 40px;padding-top: 10%;" >Contact Us</h1> -->
+        </nav>
+    </header>
+
+
+    <main>
+       
+        <div id = "contact" style="background-color: antiquewhite; padding: 50px; text-align: center;">
+            <article style="font-size: 30px;"> 
+                <p> Alke Club @ Algoma University</p>
+                <p>1520 Queen St E Sault Ste. Marie | (705) 949-2301</p> 
+
+                <figure>
+                    <a href="https://twitter.com/?lang=en" target="_blank"><img src="{% static 'website/images/twitter_logo.png' %}"
+                            width="50px; height: 50px"></a>
+                    <a href="https://www.tiktok.com/@thealkeclub?_t=8fhPVCgvgiT&_r=1" target="_blank"><img src="{% static 'website/images/tiktok_logo.png' %}"
+                             width="50px; height: 50px;"></a>
+                    <a href="https://www.instagram.com/thealkeclub/?igshid=MzRlODBiNWFlZA%3D%3D" target="_blank"><img src="{% static 'website/images/ig_logo.png' %}"
+                           width="50px; height: 50px;"></a>
+                    <figcaption style="font-size: 25px; "><i> Follow to get to see us in action</i></figcaption>
+                </figure>
+
+            </article>
+        </div>
+        
+        <!---- Message after the user fills the form -->
+        {% if  fname %}
+            <section style = "text-align: center; color:antiquewhite; background-color:rgb(47, 15, 15); padding: 49px;">
+            <h2>Thanks {{fname}}!</h2>
+            <p> We received your email and will respond shortly...</p>
+            <br/><br/><br/>
+            </section>
+        {% else %}
+        <section class="main1">
+            <div class="form_div">
+                <form id="contactForm" action = "{% url 'index' %}" method="POST">
+                    {% csrf_token %}
+        
+                    <div class="contact_form">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname" required>
+                        <small class="error-message"></small>
+                    </div>
+                
+                    <div class="contact_form">
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname" required>
+                        <small class="error-message"></small>
+                    </div>
+                
+                    <div class="contact_form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="abc@algomau.ca" required>
+                        <small class="error-message"></small>
+                    </div>
+                
+                    <div class="contact_form">
+                        <label for="phone">Phone number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                        <small class="error-message"></small>
+                    </div>
+                
+                    <div class="contact_form">
+                        <label for="feedback">Message:</label>
+                        <textarea rows="5" cols="30" id="feedback" name="feedback"
+                            placeholder="We would love to hear from you..." required></textarea>
+                        <small class="error-message"></small>
+                    </div>
+                
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>   
+        {% endif %}     
+
+        <div style="background-color: antiquewhite; padding: 50px; text-align: center;">
+            <figure>
+                <img class="hands_together" src="{% static 'website/images/Picture1.jpg' %}" style="border-radius: 10%;">
+                <figcaption style="font-size: 25px; "><i>A club that respects diversity</i></figcaption>
+            </figure>
+
+            </article>
+        </div>
+        
+        
+        <section id = "join_the_team" class = "section_googleFormAlke">
+            <!-- <iframe class = "googleFormAlke" src="https://docs.google.com/forms/d/e/1FAIpQLSceNdRpfCLRUBax6_4qQbKG8A0TqoALhJbGoKzs27d2NsN-KA/viewform?embedded=true" 
+            width="640" height="1114" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+            <iframe  class = "googleFormAlke" src="https://docs.google.com/forms/d/e/1FAIpQLSck9V3r1whTuqEACNx44RLGEvSh5y3mn3H9LZ89Hx_akYpJ8A/viewform?embedded=true" 
+            width="640" height="1006" frameborder="0" marginheight="0"  marginwidth="0">Loading…</iframe>
+        </section>
+   
+    </main>
+
+
+
+
+    <footer>
+        <article style = "text-align: center;">
+           <p>&copy; 2023 TheAlkeClub</p>
+          
+           <p id = "About" > We are a dynamic and inclusive student club dedicated to creating 
+            a supportive and empowering community for students on campus.
+            Membership is open to all students enrolled at Algoma University, 
+            regardless of race, gender, nationality, or religion.Meetings of the TAC shall be held at least once per 
+            month during the academic year, or more frequently as needed.</p>
+
+        </article>
+        <ul class="footer_nav">
+            <li><a href="#contact">Home</a></li>
+            <li><a href="#join_the_team">JoinUS</a></li>
+            <li><a href="#Events">Events</a></li>
+            <li><a href="#Board">Board</a></li>
+        </ul>    
+    </footer>
+
+
+</body>
+
+
+
+
+
+</html>
