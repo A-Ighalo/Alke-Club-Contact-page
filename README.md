@@ -6,7 +6,7 @@ A full-stack Django web application for handling user feedback and contact form 
 
 # Future Ideas
 * An AI assitant that would be asked about the club, their core values and club opportunities
-* A collection of internship opportunities for club members - not jobs but news posts, job links and seminars
+* A collection of internship opportunities for club members - I can't give jobs, if I could, hmmm. There will be news posts, job links and seminar invites
 * A slide show of new members. Probably fake members but there is definately going to be a slide show. That's web development 101
 
 
